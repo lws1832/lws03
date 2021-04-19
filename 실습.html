@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+</head>
+<body>
+    <button class="ss" onclick="btnEvent()">클릭클릭</button>
+    <div id="id">여기는 버스</div>
+    <div id="id2">여기는 기차</div>
+    <div id="id3">여기는 상추</div>
+    <div id="id4"><a id="pog" href="http://naver.com">녹색도시로 가자</a></div>
+    <button class="w1" onclick="GetLotto()">클릭</button>
+    <div id="w1">결과값</div>
+    <div id="w2">결과값</div>
+    <div id="w2">결과값</div>
+    <div id="w2">결과값</div>
+    <div id="w2">결과값</div>
+    <div id="w2">결과값</div>
+
+    <img src="./image/logo.png" width=200 height=200> <br />
+    <input type="button" id="make_button" onclick="generate_num();" value="번호 생성" />
+    <p id="result_text">결과 출력</p>
+
+
+    <script type="text/javascript">
+   /* Math.ceil(Math.random()*46);
+    console.log(Math.random()*100); // number, 0~100 사이의 랜덤한 값을 리턴
+    console.log(Math.ceil(Math.random()*46)); // number, 0~100 사이의 랜덤한 값을 올림한 정수를 반환
+        function wop(){
+    w1.innerHTML=(Math.ceil(Math.random()*46));
+    }*/
+
+    function generate_num() {
+            // 1 ~ 45
+            // 6개 + 보너스 번호
+            var lotto = new Array();
+
+            var len = 7;
+            var num = 0;
+            var result = "";
+            var is_duplicate = false;
+
+            // 길이가 len인 1차원 배열 동적 할당
+            for (var i = 1; i <= len; i++) {
+                lotto.push(0);
+            }
+
+            // 로또 번호 랜덤하게 생성하여 배열에 저장
+            for (var i = 1; i <= len; i++) {
+                num = Math.ceil(Math.random() * 45);
+
+                // 첫 번째 숫자는 중복이 없으므로
+                // 바로 배열에 저장
+                if (i == 0) {
+                    lotto[i] = num;
+                }
+                // 두 번째 숫자부터 중복 검사
+                else {
+                    // 배열의 처음부터 현재 넣을 숫자의 바로 전 인덱스까지
+                    // 중복되는 수가 있을 경우의 중복 체크
+                    for (var j = 0; j <= i - 1; j++) {
+                        // 중복되는 수가 있으면 중복 true
+                        if (lotto[j] == num) {
+                            is_duplicate = true;
+                            i -= 1;
+                            // 중복되는 위치를 지나가지 않도록
+                            // i를 1 감소시켜 중복되는 위치에 다시 수를 넣도록 함
+
+                            break;
+                            // 중복된 수가 있으면 더 검사할 필요가 없으므로
+                            // 반복문 종료
+                        }
+                        // 중복되는 수가 없으면 중복 false
+                        else {
+                            is_duplicate = false;
+                        }
+                    }
+
+                    // 중복된 값이 없을 경우
+                    // 번호를 배열에 저장
+                    if (is_duplicate == false) {
+                        lotto[i] = num;
+                    }
+                }
+            }
+
+            // 배열을 결과 문자열에 저장
+            for (var i = 1; i <= len; i++) {
+                if (i == len) {
+                    result += "<br>Bonus : ";
+                }
+                result += lotto[i] + " ";
+            }
+
+            document.getElementById("result_text").innerHTML = result;
+        }
+
+   /* function GetLotto()
+    {
+      // 6개의 로또 번호를 저장할 배열
+        var lotto = new Array(6);
+       // 추첨된 로또번호의 갯수
+        var count = 0;
+      // 번호중복 방지용 변수
+        var mFlag = true;
+        // 6개의 로또번호를 얻을때까지 반복
+        while(count < 6)
+        {
+           var number;
+           // 랜덤번호 추출
+           number = parseInt(Math.random()*45)+1
+           // 중복확인
+           for(var i=0; i<count; i++)
+              if(lotto[i] == number) mFlag = false;
+           // 중복된 번호가 아니면 로또 번호배열에 추가
+           if(mFlag)
+           {
+                lotto[count] = number;
+                count++;
+           }
+           mFlag = true;
+       }
+
+    // 추첨된 로또번호 출력
+    alert(lotto[0]+', '+lotto[1]+', '+lotto[2]+', '+lotto[3]+', '+lotto[4]+', '+lotto[5]);
+    }*/
+    
+
+         /*글자 변환*/
+         function btnEvent(){
+     op = '여기는 기차';
+
+     opt = op.replace( '기차', '관악산 흔들바위' );
+            id2.innerHTML=opt;
+    }
+     pp = document.getElementById( 'pog' ).getAttribute( 'href' );/*링크*/
+      document.write( '<div>href : ' + pp + '</div>' );
+
+    
+
+    
+   
+   
+    </script>
+</body>
+</html>

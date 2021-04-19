@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+ /*   let arr = [1,2,3,4,5,6,7,8,9,10];
+    let arr3 = ['asdfasdf','asdf','dfdfdf'];
+    let arr2 = [];
+//리두스는 2가지를 받는다.익명함수 인자값이 1:이전값 2:밸류값 3:인덱스값
+// 익명함수 ,prev
+// 익명함수 하나 ,임의값(함수 변수등)
+//p 0번째 원소값 v 두번째 원소값
+//p는 결과값으로 변하기 시작
+    arr2 = arr.reduce((p,v)=>{
+        //console.log(pre,value)
+        return p+v;
+    });
+    console.log(arr2);
+
+    //두번쨰 인자값에 대한설명
+    arr2 = arr.reduce((p,v)=>{
+        console.log(p,v);
+        p.push(v);
+        return p;
+    },[]);//여기에 보통 배열이나 객체를 많이 담는다.
+
+    console.log(arr2);
+
+    //map 대체로
+    arr2 = arr3.reduce((p,v)=>{
+        p.push(v.length);
+        return p;
+    },[]);
+
+    console.log('map 대체 :',arr2);
+
+    //filter 대체로
+    arr2 = arr.reduce((p,v)=>{
+        if(v < 5){
+            p.push(v);
+        }
+        return p;
+    },[]);
+
+    console.log('filter 대체',arr2);
+  */
+    let arr = ['foo','mandoo','ingoo','blockchain'];
+        let arr2 = [];
+        arr2=arr.map((v,i)=>{
+            return `${v+(i+1)}`
+        });
+        console.log(arr2);
+        
+        let arr3=[];
+        arr3=arr.reduce((p,v,i)=>{
+            p.push(v+(i+1));
+            return p;
+        },[]);
+        console.log(arr3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

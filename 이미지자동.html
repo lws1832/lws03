@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./이미지자동변경.css">
+</head>
+<body>
+    <!--1. 이미지 나오는 영역 만들겁니다.
+        2. 버튼이 나오는 영역 만들겁니다.
+    -->
+    <div id="banner">
+        <ul class="banner1">
+            <li class="fadein "><img src="./image/visual1.png"></li>
+            <li class="fadein"><img src="./image/visual2.png"></li>
+            <li class="fadein"><img src="./image/visual3.png"></li>
+            <li class="fadein"><img src="./image/visual4.png"></li>
+            <li class="fadein"><img src="./image/visual5.png"></li>
+        </ul>
+    </div>
+    <div id="bannerBtn">
+        <ul>
+            <li onclick="bannerBtn(0)">버튼1</li>
+            <li onclick="bannerBtn(1)">버튼1</li>
+            <li onclick="bannerBtn(2)">버튼1</li>
+            <li onclick="bannerBtn(3)">버튼1</li>
+            <li onclick="bannerBtn(4)">버튼1</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    var index = 0;
+    var rolling = null;
+    banner(0); //바로 0번째 이미지를 실행 시켜라
+    
+    function banner(n){
+        console.log(n);
+        bannerImg=document.querySelectorAll('.banner1 > li');
+        if(index >= bannerImg.length){
+            index= 0;
+        }
+
+       if(n != undefined){ //n != undefined 인자값 있을때 banner()매서드가 실행될때
+            index = n;
+        }
+
+       for(i=0; i<bannerImg.length; i++){
+            if(i == index){
+                    bannerImg.item(i).setAttribute('class','fadein on');
+            } else {
+                bannerImg.item(i).setAttribute('class','fadein');
+                }   
+       }
+        index++;
+    }
+    
+    function bannerBtn(n){
+        clearInterval(rolling);
+        banner(n);
+        rolling=setInterval(banner,5000);
+        //console.log(n);
+    }
+    rolling=setInterval(banner,5000);
+    </script>
+</body>
+</html>

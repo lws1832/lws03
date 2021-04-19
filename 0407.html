@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        #wrap{
+            width: 100%;
+        }
+        .header{
+            width: 1200px;
+            height: 200px;
+            background-color: midnightblue;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 40px;
+            position: relative; 
+            overflow: hidden;
+        }
+        .gnb>ul>li{
+            display: inline-block;
+            width: 120px;
+            height: 150px;  
+            position: absolute;
+            bottom: 150%;
+     }  
+        .gnb>ul>li.on:nth-child(1){
+            position: absolute;
+            bottom: 150%;
+            animation: slider 2s;
+            animation-fill-mode: forwards;
+        }
+        .gnb>ul>li.on:nth-child(2){
+            position: absolute;
+            bottom: 150%;
+            animation: slider 2s;
+            animation-fill-mode: forwards;
+            left:160px;
+        }
+        .gnb>ul>li.on:nth-child(3){
+            position: absolute;
+            bottom: 150%;
+            animation: slider 2s;
+            animation-fill-mode: forwards;
+            left: 280px;
+        }
+        .gnb>ul>li.on:nth-child(4){
+            position: absolute;
+            bottom: 150%;
+            animation: slider 2s;
+            animation-fill-mode: forwards;
+            left: 400px;
+        }
+        @keyframes slider{
+         from{
+             bottom: 150%;
+         }to{
+             bottom: 30%;
+         }
+     }
+        .a2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 70%;
+        }
+
+
+
+    </style>
+    <script type="text/javascript">
+        let idx=0;    
+        let gnb,btn,cbtn;
+        
+        function init(){
+            gnb=document.querySelectorAll('.b2');//gnb안에 클래서 b2전체저장
+            btn=document.querySelector('.a2');//btn안에 a2저장
+            cbtn=document.querySelector('.a3');//cbtn안에 a3저장
+            header =document.querySelector('.header');
+            btn.addEventListener('click',showMenu);//??클릭시 이벤트 발생?
+            cbtn.addEventListener('click',initIdx);//동일?
+            header.addEventListener('mouseout',hide);
+        }
+        function hide(item){
+            console.log(item);
+            if(item.clientY > 380){
+                initIdx();
+            }
+        }
+        // 재귀함수 함수내에서 동일한 함수를 호출하는것
+        function showMenu(){
+            let addr;
+            
+            if (gnb.item((gnb.length-1)).getAttribute('class') == 'b2 on') {//gnb길이-1 클래스 b2on 같으면
+                // initIdx?
+                initIdx();
+                setTimeout(showMenu,'100');
+                return false;
+            }
+
+            gnb.item(idx).classList.add('on');
+            idx++;
+            addr = setTimeout(showMenu,'50');
+            if (idx == 4){
+                idx = 0;
+                clearTimeout(addr);
+            } 
+        }
+    
+        function initIdx(){
+            gnb.forEach(ele=>{ // 반복문인데 for x foreach 
+                ele.classList.remove('on');
+            });
+        }
+    
+        window.addEventListener('DOMContentLoaded',init); 
+        // DOMContentLoaded HTML 로드가 완료가되면 실행해라 
+        // addEventListener('이벤트 내용','함수명')
+        
+        </script>
+</head>
+<body >
+    <div id="wrap">
+        <div class="header">
+            <div class="gnb">
+                <ul>
+                    <li class="b2"><img src="./image/블리자드/card4.jpeg" style="width: 100px; height: 100px;"> 내용</li>
+                    <li class="b2"><img src="./image/블리자드/card7.jpeg" style="width: 100px; height: 100px;"> 내용</li>
+                    <li class="b2"><img src="./image/블리자드/card6.jpeg" style="width: 100px; height: 100px;"> 내용</li>
+                    <li class="b2"><img src="./image/블리자드/card5.jpeg" style="width: 100px; height: 100px;"> 내용</li>
+                </ul>
+            </div>
+            <div class="a2"><a href="#">클릭</a></div>
+        </div>
+    </div>
+
+    <div class="a3"><a href="#">사라져라</a></div>
+    
+</body>
+</html>

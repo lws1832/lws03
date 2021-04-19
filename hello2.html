@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #fff;
+            color: black;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>안녕하세요</h1>
+    <input type="button" value="밝게" onclick="elem=document.querySelector('body'); elem.style.background = '#fff'; elem.style.color = '#000';">
+    <input type="button" value="어둡게" onclick="elem=document.querySelector('body'); elem.style.background = '#000'; elem.style.color = '#fff';">
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+    <p>
+        vr/ar 1기 김상균"경일은 교수님들도 잘 <br >
+        가르쳐주시고 제가 초조해지거나 의욕이 <br >
+        꺾이지 않게분위기를 다잡아주셔서 공부가 <br >
+        더 잘 되었던 것 같습니다."카카오게임즈 대표작 : ... <br >
+        카카오게임즈 프로그래머 <br >
+        김상균 취업자 <br >
+    </p>
+    <script type="text/javascript">
+        elem=document.querySelector('body');/*도큐멘트 안에 쿼리셀렉툴로 ()안에 있는걸 선택 경로지정?? */
+        elem.style.background = '#000';
+        elem.style.background = '#fff';
+        elem.style.color = '#fff';
+        elem.style.color = '#000';
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+<!--ele = document.querySelector('root');
+ele.style.color('red'); 
+/*이 방법을 추천한다. 위아래 같은거다.
+ele = document.querySelector */ 
+/*str = '위와 같이 진행하면 개발자 페이지에서 div id=root안에 헬로우 월드가 적혀있다.';
+console.log(str.length);
+/*객체
+    ()  함수 다른말로 매서드
+    '=' 속성
+    console.log 함수
+    alert 함수
+    length 글자가 몇글자인지 알 수 있게 해준다. ()이게 없어서 속성값
+*/
+
+ <str>
+        <length></length> 저거안에 이거 들어잇다라고 이해하면 됨
+    <div id="root">hello, world!</div>
+    <input type="button" value="버튼" onclick="changeColor();">
+    <script type="text/javascript">
+    function changeColor(){
+        ele = document.querySelector('#root');
+        ele.style.color = 'red';
+    }
+    
+    </script>
+    
+    -->

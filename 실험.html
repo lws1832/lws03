@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.bubble 
+	{
+	z-index:100;
+	position: relative;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	border: #7F7F7F solid 1px;
+	position: absolute;
+	font-size: 16px;
+	text-align: left;
+	}
+	
+	.bubble:after 
+	{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 16px 20px 17.5px;
+	border-color: #FFFFFF transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -18.5px; 
+	left: 49px; 
+	}
+	
+	.bubble:before 
+	{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 16px 20px 17.5px;
+	border-color: #7F7F7F transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	top: -20px;
+	left: 49px;
+	}
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+    </style>
+</head>
+<body>
+    <div class="bubble">말풍선에 쓸내용을 넣으시면 됩니다.^^ </div>
+</body>
+</html>

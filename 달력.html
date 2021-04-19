@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+      function makeCalendar(y, m) {
+         console.log(y + '년 ' + m + '월');
+         console.log("  일 월 화 수 목 금 토");
+
+         let startDay = new Date(y, m - 1, 1).getDay();
+         let endDate = new Date(y, m, 0).getDate();
+
+         let line = '';
+         for (let i = 0; i < startDay; i++) {
+            line += '   ';
+         }
+
+         if (startDay == 0) {
+            startDay = 7;
+         }
+         for (let i = 1; i <= endDate; i++) {
+            line += ' ';
+            if (i < 10)
+               line += ' ';
+            line += i;
+            if (i % 7 == 7 - startDay) {
+               console.log(line);
+               line = '';
+            }
+         }
+         if (line != '')
+            console.log(line);
+         console.log('');
+      }
+      makeCalendar(2021, 2);
+      makeCalendar(2021, 3);
+      makeCalendar(2021, 4);
+      makeCalendar(2021, 5);
+      makeCalendar(2021, 6);
+      makeCalendar(2021, 7);
+      makeCalendar(2021, 8);
+      makeCalendar(2021, 9);
+      makeCalendar(2021, 10);
+   </script>
+</body>
+</html>

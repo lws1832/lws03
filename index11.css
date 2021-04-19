@@ -1,0 +1,397 @@
+/* CSS Style Sheet */
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+    color:#666;
+}
+
+ul,li{
+    list-style:none;
+}
+
+.w100{
+    width:100%;
+    background: #0c151c;
+    
+    
+    padding: 31px 0 40px 0;
+}
+
+.row{
+    width:1200px;
+    margin: 0 auto;
+    
+    overflow:hidden;
+}
+
+.mt30{
+    margin-top:30px;
+}
+
+/*헤더 시작*/
+#head_header{
+    height:50px;
+    background: #0c151c
+}
+
+.logo{
+    margin: 10px;
+    display: inline-block;
+}
+.gnb{
+    float: right;
+    margin-top: 15px;
+}
+.gnb1{
+    position: absolute;
+    width: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.l_gnb > li ,.r_gnb > li{
+    float: left;
+    
+}
+.l_gnb  ,.r_gnb{
+    float: left;
+}
+.gnb a{
+    color: #e9ecf3;
+    display: inline-block;
+    margin-left: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.gnb >.gnb2> .r_gnb{ 
+    margin-right: 20px;
+
+}
+
+.gnb ul{
+    text-align: center;
+}
+
+.head_content1{
+    width: 600px;
+    height:350px;
+    background:#0C151C;
+    box-sizing: border-box;
+    float: left;
+    
+}
+.head_content2{
+    width: 600px;
+    height: 350px;
+    background: #0c151c;
+    box-sizing: border-box;
+    float: left;
+   
+}
+.head_content1 > h2{
+    font-size: 14px;
+    color: #0078ff;
+}
+
+.head_content1  h2 > span {
+    display: block;
+    font-size: 36px;
+    width: 350px;
+    margin: 20px 0 30px 0;
+    color: #fff;
+
+}
+.head_content1 > p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #e9ecf3;}
+
+
+.head_content1> a{
+    width: 210px;
+    height: 40px;
+    background: #0078ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 50px;
+
+}
+/*헤더 끝*/
+
+/*포지션 시작*/
+#position{
+    width: 1160px;
+}
+
+.position_header{
+    height: 30px;
+    font-size: 20px;
+    color: #263747;
+    background: #fff;
+    padding: 20px 0 35px 0;
+}
+
+.qm{
+    
+    position:relative;
+    top: 5px;  
+}
+.position_header> h4> a {
+    width: 66px;
+    height: 33px;
+    border: 1px solid #0078ff;
+    font-size: 14px;
+    color: #0078ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-left: 30px;
+}
+
+.position_header>h4>span>a{
+    float: right;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #ececec;
+    font-size: 14px;
+    color: #0078ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.position_content1{
+    width:562px;
+    height:404px;
+    float: left;;
+    box-sizing: border-box;
+    border:1px solid #D7E2EB;
+    margin-right: 32px;
+}
+
+.position_img1{
+    width: 562px;
+    height: 230px;
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+.position_img1 > img{
+    position:relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.position_img2{
+    width: 562px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 10px;   
+}
+.position_img2 > img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.position_text{
+    width: 530px;
+    height: 142px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.position_text1{
+    width: 530px;
+    height: 142px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.position_text > ul >li{
+    color: #5f7f90; 
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom: 10px;  
+}
+.position_text1 > ul >li{
+    color: #98a8b9; 
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom: 10px;  
+}
+.position_text > ul >li >a{
+    color: #263747;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+.position_text1 > ul >li >a{
+    color: #98a8b9;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.position_content2{
+    width:562px;
+    height:404px;
+    box-sizing: border-box;
+    border:1px solid #D7E2EB;
+    float: right;
+    
+}
+.position_content3{
+    width: 100%;
+    height: 22px;
+    display: block;
+    margin-top: 430px;
+    text-align: center;
+}
+/*포지션 끝*/
+
+/* 프로그램 헤더부분 시작*/
+.program_header{
+    height: 30px;
+    font-size: 20px;
+    color: #263747;
+    background: #fff;
+  
+}
+.program_header > h4{
+    margin-bottom: 16px;
+}
+.program_header > h4 > a{
+    width: 66px;
+    height: 33px;
+    border: 1px solid #0078ff;
+    font-size: 14px;
+    color: #0078ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-left: 30px;
+}
+.program_header > ul{
+    width: 1168px;
+    height: 114px;
+    padding-bottom: 32px;
+}
+.program_header > ul > li {
+    background: #eeebff;
+    float: left;
+    width: 105px;
+    height: 30px;
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.program_header > ul>li>a{
+    color: #0078ff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 프로그램 헤더부분 끝*/
+
+/* 프로그램 컨텐트 시작*/
+
+
+.program_content1{
+    width:600px;
+    height:600px;
+    box-sizing: border-box;
+    float:left;
+}
+.program_content1 > ul >li{
+    width: 542px;
+    height: 84px;
+    padding: 16px;
+    border:1px solid #0078ff;
+    margin-bottom: 16px;
+    
+}
+
+.program_content2{
+    width:600px;
+    height:600px;
+    
+    box-sizing: border-box;
+   
+    float:left;
+}
+
+.con_list > ul > li{
+    padding:30px 0;
+    width:100%;
+    background:#fff;
+    text-align:center;
+    margin-top:30px;
+}
+
+#position_footer{
+    height:150px;
+    color:#fff;
+    text-align:center;
+    box-sizing: border-box;
+    padding:60px 0;
+}
+.code_content1{
+    width: 600px;
+    height: 600px;
+    background: #666;
+    box-sizing: border-box;
+    padding: 60px;
+    float: left;
+}
+.code_content1 > ul > li{
+    padding:60px 0;
+    width:100%;
+    background:#fff;
+    text-align:center;
+    margin-top:30px;
+}
+.code_img1{
+    width: 600px;
+    height: 600px;
+    background: #666;
+    box-sizing: border-box;
+    float: left;
+    padding: 60px;  
+}
+.enter{
+    width: 1200px;
+    height: 300px;
+    background: #666;
+    text-align: center;
+    padding: 60px;
+    box-sizing: border-box;
+    color: thistle;
+    font-size: 55px;
+}
+#start_footer{
+    height: 150px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 60px 0;
+}
+#footer{
+    height: 150px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 60px 0;
+}

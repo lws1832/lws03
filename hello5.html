@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        a{
+            color: darkcyan;
+        }
+        ul,li{
+            list-style: none;
+        }
+        #wrap{
+            width: 100%;
+        }
+        #header{
+            height: 300px;
+            text-align: center;
+            background: #333;
+        }
+        
+        .logo{
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+            padding: 20px 0 40px 0;
+        }
+
+        .text1{
+            width: 400px;
+            height: 30px;
+            border-radius: 5px;
+            
+        }
+        .button1{
+            width: 40px;
+            height: 34px;
+          
+        }
+        
+        #cardList >li{
+            
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 class="logo">
+                to do list
+            </h1>
+           <div class="asd"> 
+                <input type="text" id="card_input" value="글자글자" class="text1" >
+                <input type="button" class="button1" value="+" onclick="addCard();"> 
+            </div>
+        </div>
+        <div >
+            <ul id="cardList">
+                <li>sample1</li>
+                <li>sample1</li>
+                <li>sample1</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 
+        address =['a','w','e','r','t'];
+        address.push('z');
+        console.log(address[2]); -->
+    <script type="text/javascript">
+   
+   /* function btnEvent(){
+        card_text=document.querySelector('#card_input');
+        List=document.querySelector('#cardList');
+        console.log(card_input.value);
+        liElement=document.createElement('li');
+        liElement.innerHTML=card_input.value;/*가로가 아니고 = 변수명을 적는데 html에 있는 id 카드 인풋으로 해도적용된다.
+        List.appendChild(liElement);/*리스트랑 엘리먼트 자리가 바뀌였음 *
+    }*/
+    const btnArr=[]; /*각각변수를 ,콤마로 정한다.이걸 통해서 갯수를 알 수 있다.*/
+    
+    function addCard(){  
+        const newId=btnArr.length;
+        console.log(newId);
+        cardInput=document.querySelector('#card_input');/* 인풋박스 아이디값을 받아서 변수에 담았다.*/
+        cardList=document.querySelector('#cardList');/* 내용 출력하는 영역 설정*/
+        li=document.createElement('li');/* 내용 출력하는 최소단위 엘리먼트??*/
+        li.innerHTML=cardInput.value;/* li안에 내용을 넣기 위해서 : cardInput에 있는 글자를 넣기위해 사용*/
+        cardList.appendChild(li); /*cardList안에 li을 넣어서 ul안에 li자식 노드를 만든다. 완벽하게 만든다. 버튼보다 아래에 들어가야 작동함*/
+        
+        /*-------------------------------------------*/
+
+        delBtn =document.createElement('button'); /* li안에 버튼을 넣기위해 <button></button> 엘리먼트만 생성함*/
+        delBtn.innerHTML='x'; /* 버튼안에 내용을 넣기위해 만들었다. <button>x</button> */
+        delBtn.setAttribute('id','newId');/*버튼에 속성값을 넣기위해 <button id="[newId]">x</button> */
+        delBtn.onclick=function(){ /* 버튼이 클릭 되었을때 {}안에 있는 내용이 실행된다.*/
+                 cardList.removeChild(this.parentNode);
+            /* 
+                cardList=내용을 출력한 영역 설정 부분이다.
+                removeChild()=매서드 안에 있는 값을 노드제거
+                                this.parenNode=this 개념 이행
+                                parentNode 나의 상위 엘리먼트
+            */
+        }
+            
+        li.appendChild(delBtn); 
+        /* li엘리먼트 안에 자식노드를 만든다 여태동안 만들었던 delBtn 을 넣는다
+            <li>[cardInput.value]<button id="[newId]">x</button></li> */
+        cardList.appendChild(li); /* cardList 안에 li을 넣어서 ul안에 li자식 노드를 만든다.완벽하게 만든다.*/ 
+        btnArr.push(cardInput.value); /* 배열에 cardInput.value을 넣는다.*/
+        
+        /* 배열은 삭제를 실행시키는 함수가 존재하기에 필요가없다. ?
+        삭제 실행시키는 함수가 없으면 배열 값을 입력하고 원하는 엘리먼트를 삭제한다?
+        삭제를 하기위해 어떤 코드를 넣어야한다? */
+        /*
+            [cardInput.value]
+            <button id="btn1">x<button>
+        </li>*/
+    }
+    </script>
+</body>
+</html>

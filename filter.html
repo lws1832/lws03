@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let arr = [25,26,27,28,29,30,31,32,33,34,35,36];
+        let arr2 = [];
+//필터 걸러낸다.
+//filter(function() ) forEach문이랑 똑같다.
+//return
+        arr2 = arr.filter(v=>{
+            return v < 30;
+        });
+        
+        console.log(arr2);
+
+
+        let arr3 = [];
+
+        arr.forEach(v => {
+            if(v < 30){
+                arr3.push(v);
+            }
+        });
+
+        console.log(arr3);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

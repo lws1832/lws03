@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+img{
+    display:block;
+    line-height: 0;
+}
+#wrap{
+    width: 100%;
+}
+#header{
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+#header>#logo{
+    float: left;
+    width: 200px;
+}
+#header>#gnb{
+    float: left;
+}
+
+#header>#gnb>ul>li{
+    float: left;
+}
+#header>#gnb>ul>li>a{
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0;
+}
+/*------------------------*/
+#header>.snb_area{
+    clear: both;/*취소 시킬때 사용한다. 좌우 취소시킨다.*/
+    background: red;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0.8;
+}
+.snb_area>h2{
+    float: left;
+    width: 200px;
+}
+.snb_area >ul{
+    float: left;
+    width: 180px;
+}
+.snb_area>ul>li{
+    text-align: center;
+}
+#header>.snb_area.navi{
+    animation: slider 0.5s;
+    animation-fill-mode: forwards;
+    /*animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.
+    forwards 애니메이션이 끝난 후 그 지점에 그대로 있습니다.
+    */
+}
+@keyframes slider{
+    from{
+        height: 1px;
+    }to{
+        height: 150px;
+    }
+}

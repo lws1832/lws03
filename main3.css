@@ -1,0 +1,121 @@
+*{margin: 0;padding: 0;}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#warp{
+    width: 100%;
+}
+#header{
+    width: 100%;
+}
+#header_contanier{
+    width: 1200px;
+    margin: 0 auto;
+    height: 102px;
+}
+#logo{
+    display: inline-block;
+    margin: 20px;
+}
+#gnd{
+    float: right;
+}
+#gnd>ul>li{
+   float: left;
+    display: inline-block;
+    width: 100px;
+    padding: 40px 0;
+}
+#gnd>ul>li>a{
+    font-size: 19px;
+    color: #004385;
+    font-weight: bold;
+}
+#visual{
+    height: 500px;
+}   
+#container{
+    width: 100%;
+    height: 200px;
+  
+}
+#contents{
+    width: 1200px;
+    margin: 30px auto 0 auto;
+    height: 100px;
+ 
+}
+.con_notice{
+    width: 600px;
+}
+.con_notice>ul>li{
+    float: left;
+    width: 50%;
+    height: 240px;
+    padding: 5px;
+    border:1px solid #ececec;
+    box-sizing: border-box; /* 박스 크기를 어떤것의 기준으로 계산할지를 정하는속성
+    border-box는 테두리를 기준으로 크기를 정한다.
+    content-box는 영역을 기준으로 크기를 정한다. */
+}
+
+.con_notice>ul>li.con_notice1{
+    background: url("c:/Users/user/이우성/image/main_con_ic_02.png") bottom right no-repeat; 
+    background-position: 178px 109px; /* 위에는 절대경로 나머지 아래는 상대경로*/
+}
+.con_notice>ul>li.con_notice2{ 
+    background: url('./image/main_con_ic_02.png') bottom right no-repeat; /* 경로를 지정*/
+    background-position: 178px 109px; /*위치는 지정*/
+}
+.con_notice>ul>li.con_notice3{
+    background: url('./image/main_con_ic_04.png') bottom right no-repeat; /* 경로를 지정*/
+    background-position: 178px 109px; /*위치는 지정*/
+}
+.con_notice>ul>li.con_notice4{
+    background: url('./image/main_con_ic_05.png') bottom right no-repeat; /* 경로를 지정*/
+    background-position: 178px 109px; /*위치는 지정*/
+} 
+/* 절대경로- 최상위 디렉토리가 반드시 포함 된 경로
+            최초의 시작점으로부터 경유한 모든 경로를 전부 기입하는 방식
+            정적인 문자열을 통해 특정 컴퓨터의 파일 위치를 정확히 알려준다
+    상대경로- 현재 디렉토리(비교 대상)를 기준으로 작성된 경로
+             반드시 비교대상이 있어야 한다.
+             정적인 절대경로의 단점을 보완
+             파일의 경로가 자주 변경되거나 루트 디렉토리가 서로 다른 OS를 다루는 경우 등
+               1  '/'    -> 가장 최상의 디렉토리로 이동한다.(Web root)
+               2  './'   -> 파일이 현재 디렉토리를 의미한다.
+               3  '../'  -> 상위 디렉토리로 이동한다.
+                    - 만약 두단계 상위 디렉토리로 이동하려면
+                    '../../' 이렇게 사용하면 된다. */
+
+/* 배경이미지를 설정하고 이미지 경로지정방식 위치를 밑에 오른쪽으로 배치하고 
+ 영역보다 이미지가 작으면 반복출력되는데 이 현상을 no-repeat으로 막을 수 있다. 
+   배경이미지 위치를 정하는 속성*/
+
+.con_itme>h2{
+    font-size: 22px;
+}
+.con_item > h2> span{
+    font-size: 14px;
+    color: #81b4f2;
+    display: block;
+}
+.con_item>p{
+    padding: 30px 0 0 0;
+    width: 130px;
+    font-size: 11px;
+}
+.con_item>a{
+    display: block;
+    margin: 30px 0 0 0;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background: #81b4f2;
+    text-align: center;
+    border-radius: 15px; /* 가장자리를 둥글게 만들어준다 패딩, 마진처럼 각각다른값 입력이 가능하다.*/
+    line-height: 32px; /* 줄 높이를 정하는 속성 */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+  
+  let item = 0;
+let boxItem = 0;
+let flag = true;
+let result;
+
+function boxCount(n){
+    item = n;
+    if(item%5 == 0){ 
+        result = (item/5) + boxItem;
+        flag = false;
+    } else if(item <= 0) {
+        result = -1;
+        flag = false;
+    }
+    item -= 3;
+    boxItem++;
+    if (flag) boxCount(item);
+    return result;
+}
+
+result = boxCount(101);
+console.log(result);
+
+let to=0;
+let tobox=0;
+let tt=true;
+let result;
+function boxCount(){
+    to=0;
+    if(to%5==0){
+        riset=(to/5)+tobox;
+        tt=false;
+    }else if(to<=0){
+        riset =-1;
+        tt=flase;
+    }
+    to-=3;
+    tobox++;
+    if(tt) boxCount(to);
+    return result;
+}
+
+    </script>
+</head>
+<body>
+    <!--5개는 1박스
+        01234개는 1박스-->
+</body>
+</html>

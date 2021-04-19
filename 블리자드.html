@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./블리자드.css">
+    <script text="text/javascript" src="./블리자드.js"></script>
+    <!--웹 페이지에서 이미지 끌어오는 경로??-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+      
+       
+</head>
+
+<body>
+    <div id="warp">
+        <div id="header">
+            <div id="header_1">
+                <h1 id="logo">
+                    <a href="https://www.blizzard.com/">
+                        <img src="./image/블리자드/blizzard.png"></a>
+                </h1>
+                <div id="gnb">
+                    <ul>
+                        <li class="btn" id="btn2" onclick="show(0)"><a href="#"> 게임 <img src="./image/블리자드/gnb아래키.png"></a></li>
+                        <li><a href="#"> 샵</a></li>
+                        <li><a href="#"> 새소식</a></li>
+                        <li class="btn" id="btn2" onclick="show(1)"><a href="#"> E스포츠 <img src="./image/블리자드/gnb아래키.png"></a></li>
+                        <li><a href="#"> 이벤트</a></li>
+                    </ul>
+                    <div id="gnb_ri">
+                        <ul>
+                            <li><a href="#"> 고객지원</a></li>
+                            <li><a href="#"> 내 계정</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_label">
+                    <!--width 100%-->
+                    <div class="gnb_label_1600">
+                        <div class="gnb_label_le">
+                            <!--width 1140 height 323-->
+                            <h4>블리자드</h4>
+                            <ul> 
+                                <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/디아블로 레저렉션.png">  
+                                   <p class="show">디아블로@II:레저렉션</p>
+                                </li>
+                                <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/아케이드 컬렉션.png">
+                                   <p class="show">블리자드<span>@</span>아케이드 컬렉션</p>
+                                </li>
+                                <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/오버워치2.png">
+                                    <p class="show">오버워치<span>@</span>2</p>
+                                </li>
+                                <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/오버워치.png">
+                                    <p class="show">오버워치<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/월드오브 워크래프트.png">
+                                    <p class="show">월드 오브 워크래프트<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/하스스톤.png">
+                                    <p class="show">하스스톤<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/히어로즈 오브더스톰.png">
+                                    <p class="show">히어로즈 오브 더 스톰<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/워크래프트리포지드.png">
+                                    <p class="show">워크래프트<span>@</span>III:리포지드<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/디아블로4.png">
+                                    <p class="show">디아블로<span>@</span>IV</p>
+                                </li>
+                          
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/디아블로 이모탈.png">
+                                    <p class="show">디아블로<span>@</span>이모탈<span>@</span></p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/디아블로3.png">
+                                    <p class="show">디아블로<span>@</span>III</p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/스타2.png">
+                                    <p class="show">스타크래프트<span>@</span>II</p>
+                                </li>
+                                 <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/스타 리마스터.png">
+                                    <p class="show">스타크래프트<span>@</span>리마스터</p>
+                                </li>
+                    
+                            </ul>
+                        </div>
+                        <div class="gnb_label_ri">
+                            <!--width 380 height 323-->
+                            <h4>ACTIVISION</h4>
+                            <ul>
+                                <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/./콜오브듀티.png">
+                                   <p class="show"> 콜 오브 듀티<span>@</span>:블랙 옵스 콜드워</p>
+                                </li>
+                                  <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/./콜오브듀티워존.png">
+                                  <p class="show">  콜 오브 듀티<span>@</span>:워존</p>
+                                </li>
+                                  <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/./콜오브듀티 모던웨페어2.png">
+                                  <p class="show">  콜 오브 듀티<span>@</span>:모던 워페어 2 캠페인 리마스터</p>
+                                </li>
+                                  <li>
+                                    <img class="show" src="./image/블리자드/gnb_label/./콜 오브 듀티 블랙옵스4.png">
+                                  <p class="show">  콜 오브 듀티<span>@</span>:블랙 옵스4</p>
+                                </li>
+                            </ul>
+                        </div>       
+                    </div>
+                    <div class="gnb_label_bt">
+                        <!--width100퍼 height 50-->
+                        <ul >
+                            <li class="show">
+                                <img src="./image/블리자드/gnb_label/label_bt/svgexport-11.png">
+                               <p> 모든 게임</p>
+                            </li>
+                            <li class="show">
+                                <img src="./image/블리자드/gnb_label/label_bt/svgexport-12.png">
+                               <p> 블리자드 Battle.net 앱</p>
+                            </li>
+                            <li class="show">
+                                <img src="./image/블리자드/gnb_label/label_bt/svgexport-13.png">
+                               <p> 다운로드</p>
+                            </li>
+                            <li class="show">
+                                <img src="./image/블리자드/gnb_label/label_bt/svgexport-14.png">
+                              <p>  게임 토론장</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_label2"><!--width 100%-->
+                    <ul>
+                        <li>
+                            <img class="show" src="./image/블리자드/gnb_label/오버워치 리그.png">
+                            <p class="show">오버워치 리그</p>
+                        </li>
+                        <li>
+                            <img class="show" src="./image/블리자드/gnb_label/오버워치 월드컵.png">
+                            <p class="show">오버워치 월드컵</p>
+                        </li>
+                        <li>
+                            <img class="show" src="./image/블리자드/gnb_label/하스스톤 마스터즈.png">
+                            <p class="show">하스스톤 마스터즈</p>
+                        </li>
+                        <li>
+                            <img class="show" src="./image/블리자드/gnb_label/스타크래프트 2 wcs.png">
+                            <p class="show">스타크래프트 II WCS</p>
+                        </li>
+                        <li>
+                            <img class="show" src="./image/블리자드/gnb_label/와우 아레나 월드 챔피언십.png">
+                            <p class="show">월드 오브 워크래프트 아레나 월드 챔피언십</p>
+                        </li>
+                    </ul>
+                    <div class="gnb_label2_bt">
+                        <ul>
+                            <li class="show">
+                                <img  src="./image/블리자드/gnb_label/label_bt/svgexport-16.png">
+                                <p>커뮤니티 토너먼트</p>
+                            </li>
+                        </ul>    
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+        <div id="container">
+            <div class="contents">
+                <div class="main_img">
+                    <div class="main_le_ri">
+                        <button><img class="le" onclick="sliderBtn(n)" src="./image/블리자드/메인이미지 왼.png"></button>
+                        <button><img class="ri" onclick="sliderBtn(n)" src="./image/블리자드/메인이미지 오.png"></button>
+                    </div>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/D2R_2021_Blizzard.comDesktop_2500x514_MB01.png">
+                        <ul>
+                            <h1><img src="./image/블리자드/D2R_DiabloResurrected_Logo_blizz.png"></h1>
+                            <li>pc 테크니컬 알파가</br>
+                                곧 공개됩니다</li>
+                            <a href="#">자세히 알아보기</a>
+                        </ul>
+                    </section>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/wow-charity-pets-combo-static-banner-2500x514-RD01_2.png">
+                        <ul>
+                            <h1><img src="./image/블리자드/MSF_Logo_Black_-_JPG.png" width="260"></h1>
+                            <li style="margin-top: 40px;">목표 기부금을 달성하여</br>
+                                바나나몽치가 잠금</br>
+                                해제되었습니다!</li>
+                            <a href="#">지금 바로 등록하세요</a>
+                        </ul>
+                    </section>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/20p0_Mega_Bundle_BlizzardCom-Header-2500x514.jpeg">
+                        <ul>
+                            <h1><img src="./image/블리자드/HS20_Barrens_Logo_koKR_wHS.png"></h1>
+                            <li>새로운 확장팩</li>
+                            <a href="#">예약 구매</a>
+                        </ul>
+                    </section>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/wow-bcc-beta-now-live-web-2500x514-RD01.jpg">
+                        <ul>
+                            <h1><img src="./image/블리자드/WoW_C_BurningCrusade_Logo_DarkBG_MN03.png"></h1>
+                            <li>베타가 시작되었습니다</li>
+                            <a href="#">참가 신청하기</a>
+                        </ul>
+                    </section>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/CODCW_S2_Keyart-Bnet-Home_Banner_Desktop_Home-2500x514.jpeg">
+                        <ul>
+                            <h1><img src="./image/블리자드/d20201211-017_CW_WZ_Logo_Lock_Up_1P_Stacked.png" width="260">
+                            </h1>
+                            <li style="margin-top: 40px;">시즌 2 지금 이용 가능</li>
+                            <a href="#">자세히 보기</a>
+                        </ul>
+                    </section>
+                    <section class="main_baneer">
+                        <img src="./image/블리자드/30celebration_collection_blizzard_com_desktop_2500x514_adjusted_2.jpeg">
+                        <ul>
+                            <h1><img src="./image/블리자드/Blizzard_30yr_Logo_1C_White.png"></h1>
+                            <li>기념 컬렉션을</br>
+                                획득하세요</li>
+                            <a href="#">구매하기</a>
+                        </ul>
+                    </section>
+                </div>
+                <div class="main_slider">
+                    <!--여기 폼 width100%-->
+                    <div class="item" onclick="sliderBtn(0)">
+                        <div class="active" style></div>
+                    </div>
+                    <div class="item" onclick="sliderBtn(1)">
+                        <div class="active" style></div>
+                    </div>
+                    <div class="item" onclick="sliderBtn(2)">
+                        <div class="active" style></div>
+                    </div>
+                    <div class="item" onclick="sliderBtn(3)">
+                        <div class="active" style></div>
+                    </div>
+                    <div class="item" onclick="sliderBtn(4)">
+                        <div class="active" style></div>
+                    </div>
+                    <div class="item" onclick="sliderBtn(5)">
+                        <div class="active" style></div>
+                    </div>
+                </div>
+                <div class="main_card">
+                    <!--여기 폼 width100%-->
+                    <div class="card_name">
+                        <!--여기 제목 width 1320px height 65px-->
+                        <h1>게임</h1>
+                        <a href="#"><span>모든 게임 구매하기</span></a>
+
+                    </div>
+                    <ul class="cardall">
+                        <!--카드목록폼 width 1320px heiht 1031px-->
+                        <li class="card"><img src="./image/블리자드/card1.jpeg"></li>
+                        <!--width 240px heiht320px-->
+                        <li class="card"><img src="./image/블리자드/card2.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card3.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card4.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card5.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card6.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card7.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card8.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card9.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card10.jpeg"></li>
+
+                        <li class="card"><img src="./image/블리자드/card11.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card12.jpeg"></li>
+                        <li class="card"><img src="./image/블리자드/card13.jpeg"></li>
+
+                    </ul>
+                </div>
+                <div class="main_snb">
+                    <!--여기 폼 width100%-->
+                    <div class="snb_box">
+                        <!--width 1711px(패딩56픽셀) heigth448px-->
+                        <div class="box_le">
+                            <!--width462 heigth315-->
+                            <h1>Battle.net 다운로드</h1>
+                            <ul>
+                                <li><img src="./image/블리자드/box_le1.png"> 모든 게임을 한 곳에서</li>
+                                <li><img src="./image/블리자드/box_le2.png">친구들과 함께하세요</li>
+                                <li><img src="./image/블리자드/box_le3.png">디지털 게임과 상품을 구매하세요</li>
+                                <a href="#" class="box_btn1">Windows용 다운로드
+                                    <img src="./image/블리자드/윈도우로고.png">
+                                </a>
+                                <a href="#" class="box_btn2">자세히 보기
+                                </a>
+                                <p>
+                                    <a href="#">모바일 앱</a>
+                                    <span>으로 이용할 수 있습니다.</span>
+                                </p>
+                            </ul>
+                        </div>
+                        <div class="box_ri">
+                            <!---이미지 겹치게-->
+                            <iframe width="480" height="240" src="https://www.youtube.com/embed/XUuSxAC5tx8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <iframe width="480" height="240" style="margin-left: 20px;"
+                                src="https://www.youtube.com/embed/gDrlzUseqSM" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="main_btnbar">
+                    <!--여기 폼 width100%-->
+                    <div class="btnbar">
+                        <!--width 1600 height300-->
+                        <h1>
+                            새로운 세계를 창조하시겠습니까?
+                        </h1>
+                        <h2>
+                            블리자드의 인재 채용 정보를 살펴보세요.
+                        </h2>
+                        <a href="#">인재 채용 살펴보기</a>
+                    </div>
+                </div>
+                <div class="main_footer">
+                    <!--여기 폼 width100% 530-->
+                    <div class="footer1">
+                        <a href="#">
+                            <i class="fas fa-globe-americas"></i>
+                            <label class="foot_name">한국어</label>
+                            <div class="foot_t_b">
+                                <i class="fas fa-chevron-up"></i>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer2">
+                        <img src="./image/블리자드/footer.png">
+                    </div>
+                    <div class="footer3_gnb">
+                        <ul>
+                            <li><a href="#">인재 채용</a></li>
+                            <li><a href="#">회사 소개</a></li>
+                            <li><a href="#">고객지원</a></li>
+                            <li><a href="#">보도 자료</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">블리자드 PC방</a></li>
+                            <li><a href="#">사이트 맵</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer4">
+                        <ul>
+                            <li>
+                                한 곳에서 모든 게임을 플레이할 수 있는:
+                                <img src="./image/블리자드/footer4.png">
+                                <a href="#">Battle.net 앱</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer5">
+                        <p>©2021 BLIZZARD ENTERTAINMENT, INC. 모든 권리는 BLIZZARD ENTERTAINMENT에 있습니다.</br>
+                            여기서 언급된 다른 모든 <a href="#">상표</a>는 각 소유권자들의 자산입니다.</p>
+                        <ul class="foo5_gnb">
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">법률 관련 문서</a></li>
+                            <li><a href="#">이용 약관</a></li>
+                            <li><a href="#">쿠키</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer6">
+                        <p>
+                            블리자드 엔터테인먼트 유한 회사
+                        </p>
+
+                        <p>
+                            주소: 06164 서울시 강남구 테헤란로 521 파르나스타워 15층
+                        </p>
+                        <p>
+                            대표 번호: 1644-0727 | 팩스 번호: (02)544-3038 | 이메일:<a href="#">websupport@blizzard.co.kr</a>
+                        </p>
+                        <p>
+                            사업자 등록 번호: 211-87-49910 | 통신 판매업 신고 번호: 강남-6017호 | <a href="#">사업자정보확인</a>
+                        </p>
+                        <p>
+                            대표이사: 자렛 알렌 브랙, 전동진 | 개인정보 보호책임자: 전동진 대표이사
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+        var index = 0;
+var rolling;
+   slider(0);
+function slider(n) {
+    let main_img = document.querySelectorAll('.main_img>.main_baneer');
+    if (index >= main_img.length) {
+        index = 0;
+    }
+    if (n != undefined) {
+        index = n;
+    }
+    for (i = 0; i < main_img.length; i++) {
+        if (i == index) {
+            main_img.item(i).setAttribute('class', 'main_baneer on');
+        } else {
+            main_img.item(i).setAttribute('class', 'main_baneer');
+        }
+    }
+    index++;
+    console.log(main_img);
+}
+
+function sliderBtn(n) {
+    clearInterval(rolling);
+    slider(n);
+    rolling = setInterval(slider,5000);
+}
+   rolling = setInterval(slider, 5000);
+/*
+var width = 0;
+var bar = 0;
+barMove(0);
+function barMove(n){
+   let active = document.querySelectorAll('.item>.active');
+
+  //console.log(active);
+    if(width >= active.length){
+        width=0;  
+    }
+    if (n != undefined) {
+        index = n;
+    }
+    for(let i=0; i<active.length; i++){
+        if(i==width){
+            active.item(i).setAttribute('class','active move');
+        }else{   
+            active.item(i).setAttribute('class','active');
+        }
+    }
+
+    width++;
+}
+
+rolling = setInterval(barMove,5000);
+
+
+
+bar100(0);
+function bar100(n){
+let itemon = document.querySelectorAll('.item');
+if(bar>=itemon.length){
+    bar=0;
+    //console.log(itemon);
+}
+if (n != undefined) {
+    index = n;
+}
+for(let i=0; i<itemon.length; i++){
+        if(i==bar){
+            itemon.item(i).setAttribute('class','item itemon');
+        }else{
+            itemon.item(i).setAttribute('class','item');
+        }
+    }
+    bar++;
+}
+
+rolling = setInterval(bar100, 5000);
+*/
+        </script>
+
+</body>
+
+</html>

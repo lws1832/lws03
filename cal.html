@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /* https://webruden.tistory.com/69 */
+        let setYear = 2021;
+        let setMonth = 12;
+        let setDay = 1;
+        let dt = new Date(`${setYear}-${setMonth}-${setDay}`);
+        let arrDayStr = ['일','월','화','수','목','금','토'];
+
+        function getLastDay(year,month){
+            let date = new Date(year,month,0);//객체생성
+            return date.getDate();//종료
+        }
+
+        let LastDay = getLastDay(setYear,setMonth);
+        let weekDay = dt.getDay();
+
+        let week = [[],[],[],[],[],[]];//6개 배열 이중배열 1개씩
+        let day = [];//1개 배열
+        let i=1;
+        let k=0;
+        while(i < 38){
+            day.push(i);
+            if ((i+weekDay)%7 == 0) {
+                console.log(LastDay);
+                console.log(i);
+                week[k] = day;
+                k++;
+                day  = [];        
+            }
+            i++;
+        }
+
+        if(week.length > 6){
+            week.pop();
+        } else if(week.length == 6){ 
+            if(week[week.length-1].length == 0){
+                week.pop();
+            }
+        }
+        sample = [];
+        week[week.length-1] = week[week.length-1].filter((day)=>{
+            if(day <= LastDay)
+                return day
+        });
+        
+        console.log(`   ${setMonth}월 달입니다.`);
+        console.log('일','월','화','수','목','금','토');
+        for(let i = 0; i< week.length; i++){
+            txt = '';
+            for(let k = 0; k < week[i].length; k++){
+                daytxt = `${week[i][k]} `;
+                if(daytxt.length == 2) {
+                    txt += '0'+daytxt;
+                } else {
+                    txt += daytxt;
+                }
+            }
+            if(i == 0) {
+                space = '                                                        ';
+                console.log('%s%s',space.substring(0,(3*weekDay)),txt); // 스페이스 3번당 1일 
+            } else {
+                console.log(txt);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

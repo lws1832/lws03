@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="gnb">안녕하세요</div>
+    <!--<input type="button" id="bt" value="맑게" onclick="ele=document.querySelector('body'); ele.style.background='red'; ele.style.color='blue';" >
+    <input type="button" id="bt2" value="탁하게" onclick="ele=document.querySelector('body'); ele.style.background='blue'; ele.style.color='red'; ">
+    -->
+    <input type="text" id="bt" value="맑게">
+    <input type="button" id="bt2" value="탁하게" onclick="btnEvent();">
+    <ul id="btn">
+        <li>asdasd</li>
+    </ul>
+    <script type="text/javascript">
+    function btnEvent(){
+        card_bt=document.querySelector('#bt');
+        card_List=document.querySelector('#btn');
+        liElement=document.createElement('li');
+        liElement.innerHTML=card_bt.value;
+        
+        delBtn=document.createElement('button');/*버튼을 만들기 위함 li안에 넣기위함*/
+        delBtn.innerHTML='x';
+        delBtn.setAttribute('id','newId');
+        delBtn.onclick=function(){
+                card_List.removeChild(this.parentNode);
+        }
+        liElement.appendChild(delBtn);
+        card_List.appendChild(liElement);
+        
+    }
+   
+   /*function btnEvent(){
+        ele=document.querySelector('body');
+        ele.style.background='blue';
+        ele.style.color='red';
+    }*/
+  
+    ele=document.querySelector('body');
+    ele.style.background='red';
+    ele.style.color='blue';
+    wo=1;
+    wo2=2;
+    console.log(wo==wo2);
+    for(w=1; w<20; w++){
+    console.log("2*"+w+'='+2*w);}
+    </script>
+    
+</body>
+</html>

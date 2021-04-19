@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            background: yellowgreen;
+            float: left;
+            
+        }
+
+        .container{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .visual_box{
+            width: 600px;
+            height: 200px;
+            display: inline-block;
+        }
+    </style>
+    
+</head>
+<body>
+<div id="root">
+    <div class="container">
+        <ul class="visual_box">
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+</div>
+
+    <script>
+    
+        /* 시계 
+        function timer(){
+            date = new Date();
+            time = date.toLocaleTimeString();
+            document.querySelector("#root").innerHTML = time;
+        }
+
+        setInterval(timer,1000);
+
+        */
+       
+        function moving(){
+            box = document.querySelector('.visual_box');
+            li = document.querySelector('li');
+            box.removeChild(li);
+            box.appendChild(li);
+        }
+
+        setInterval(moving,1000);
+
+        
+
+    </script>
+</body>
+</html>

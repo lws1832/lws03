@@ -1,0 +1,130 @@
+*{margin:0; padding:0;}
+
+a{text-decoration:none;}
+
+ul,li{list-style: none;}
+
+html,body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#wrap{
+    width:100%;
+}
+
+#header{
+    width:1200px;
+    /*height:200px;*/
+    margin:0 auto;
+}
+
+#a1{
+    margin-top:20px;
+    float:left;
+}
+
+#b1{
+    float:right;
+}
+
+#b1>ul>li{
+    float:left;
+    width:150px;
+    margin-top: 30px;
+    padding:10px;
+    text-align: center;
+
+}
+
+#b1>ul>li>a{
+    color:#004385;
+    font-weight: bold;
+    font-size:20px;
+    font-family: 명조체, 굴림체, 돋움체, sans-serif;/*명조체 구현 안되면 순서대로 구현됨*/
+}
+
+#c1{
+    clear: both;
+    width: 1900px;
+    height:500px;
+    margin: 0 auto;
+}
+
+#d1{
+    width:100%;
+}
+
+#d2{
+    width:1200px;
+    margin: 0 auto;
+
+}
+
+.d3{
+    width:600px;
+    margin-top:30px;
+}
+
+.f{
+    width:50%;
+    box-sizing:border-box;
+    height: 250px;
+    border: 1px solid #ececec;
+    float: left;
+    padding:20px;
+
+}
+
+span{
+    color:#5988c7;
+    font-size:12px;
+    font-weight: bold;
+}
+
+/*a에 바로가기 설정 다 넣음*/
+.f>a{
+    color:white;
+    background-color:#78acf1;
+    display:block;/*inline-block하면 h2에 붙음*/
+    width:102px;
+    height: 30px;
+    border-radius: 15px;
+    text-align:center;/*이걸 통해 세로 줄맞춤*/
+    line-height: 30px;
+    font-size:14px;
+    font-weight: bold;
+    
+}
+
+.f>p{
+    margin-top:20px;
+    color: gray;
+    display: inline-block;/*block해도 상관 없음*/
+    width:130px;
+    height: 100px;   
+    box-sizing: border-box;/*높이를 일단 설정해놔서 바로가기 위치를 일일이 고정할 필요 없게함*/
+    font-size:12px; 
+}
+
+.e1{
+    background: url('../images/main_con_ic_01.png') no-repeat; 
+    background-position: 155px 100px; /*왼쪽 위 꼭지점 위치좌표*/
+    background-size:40%;/*배경이미지 확대축소*/
+}
+.e2{
+    background: url('../images/main_con_ic_02.png') no-repeat; 
+    background-position: 155px 100px;
+    background-size:40%;
+}
+.e3{
+    background: url('../images/main_con_ic_04.png') no-repeat; 
+    background-position: 155px 100px;
+    background-size:40%;
+}
+.e4{
+    background: url('../images/main_con_ic_05.png') no-repeat; 
+    background-position: 155px 100px;
+    background-size:40%;
+}
+
+/*enumber에 bottom right안 함(position이 위치 잡아주기 때문에)*/
